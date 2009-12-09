@@ -1,5 +1,40 @@
 vimide - VIM as an Integrated Development Environment
 
+Plugins Included:
+----------------
+MiniBufExpl - http://www.vim.org/scripts/script.php?script_id=159
+	Use Shift-( and Shift-) switch between buffers
+
+NERD_Tree - http://www.vim.org/scripts/script.php?script_id=1658
+	Pressing <F9> will toggle the project explorer in a right pane
+
+NERD_Commenter - http://www.vim.org/scripts/script.php?script_id=1218
+	To toggle commenting a line or visual block use ,c<space>
+
+Tasklist - http://www.vim.org/scripts/script.php?script_id=2607
+	Pressing <F7> will toggle the task list in a top pane
+
+Taglist - http://www.vim.org/scripts/script.php?script_id=273
+	Pressing <F8> will toggle the code explorer in a left pane
+
+Pydoc - http://www.vim.org/scripts/script.php?script_id=910
+	While over a word use \pW to bring up pydoc for that word (if any)
+	Alternatively, use :Pydoc some.python.module to view the docs associated with a 
+	particular python module
+
+VIM Completion Plugins:
+----------------
+SuperTab - http://www.vim.org/scripts/script.php?script_id=182
+	Configured to auto determine appropriate completion type (defaults to dictionary 
+	look-up using pydiction's dictionary)
+	Press tab after a . or word while in insert mode to see possible completions.
+
+Pydiction - http://www.vim.org/scripts/script.php?script_id=850
+	Using only the dictionary for default completion type with supertab. This way, 
+	SuperTab handles the Tab key and we still get pydiction's nice completions when 
+	omnicomplete can't do the job.
+
+
 Installation:
 -------------
 
