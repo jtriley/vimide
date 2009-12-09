@@ -41,7 +41,7 @@ imap <F1> <Esc>
 "keymap for setting paste mode
 set pastetoggle=<C-x>
 
-" map dot to .
+"map dot to .
 function! DropDownMenu()
 	if exists('&omnifunc') && &omnifunc != ''
 		return ".\<C-X>\<C-O>"
@@ -49,6 +49,8 @@ function! DropDownMenu()
 		return "."
 	endif
 endfunction
+
+imap <silent> <buffer> . <c-r>=DropDownMenu()<CR>
 
 command Pylint :call Pylint()
 function! Pylint()
@@ -64,8 +66,6 @@ fun! Pyflakes()
 	make "%"
 	cw
 endfunction
-
-imap <silent> <buffer> . <c-r>=DropDownMenu()<CR>
 
 nnoremap <F2> :set invnumber<CR>
 :highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
