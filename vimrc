@@ -16,7 +16,7 @@ set history=1000
 "drop-down menu options
 set wildmenu
 set wildmode=list:longest
-set completeopt+=longest,menuone
+set completeopt=longest,menuone
 
 ""folding settings
 set foldmethod=indent   "fold based on indent
@@ -41,7 +41,6 @@ imap <F1> <Esc>
 "keymap for setting paste mode
 set pastetoggle=<C-x>
 
-"map dot to .
 function! DropDownMenu()
 	if exists('&omnifunc') && &omnifunc != ''
 		return ".\<C-X>\<C-O>"
@@ -49,7 +48,7 @@ function! DropDownMenu()
 		return "."
 	endif
 endfunction
-
+"map . to trigger omnifunc if it's defined
 imap <silent> <buffer> . <c-r>=DropDownMenu()<CR>
 
 command Pylint :call Pylint()
@@ -82,8 +81,9 @@ nnoremap <silent> <F9> :NERDTreeToggle<CR>
 autocmd FileType xml nmap <F2> <Esc>:1,$!xmllint --format -<CR>
 
 " omnicomplete/supertab settings
-"let g:SuperTabDefaultCompletionTypeDiscovery = "&omnifunc:<C-X><C-O>,&completefunc:<C-X><C-U>"
-"let g:SuperTabLongestHighlight = 1
+let g:SuperTabDefaultCompletionType="context"
+let g:SuperTabContextDefaultCompletionType="<c-x><c-k>"
+let g:SuperTabLongestHighlight = 1
 
 " Popup menu hightLight Group
 highlight Pmenu ctermbg=Blue guibg=LightGray
@@ -111,8 +111,8 @@ highlight MBEChanged guibg=Red guifg=DarkRed
 highlight MBEVisibleNormal term=bold cterm=bold gui=bold guibg=Gray guifg=Black
 " buffers that have CHANGED and are VISIBLE
 highlight MBEVisibleChanged term=bold cterm=bold gui=bold guibg=DarkRed guifg=Black
-let g:pydiction_location = '~/.vim/vimfiles/ftplugin/pydiction/complete-dict'
-let g:pydiction_menu_height = 15
+" load pydiction's complete-dict
+let &dictionary = '~/.vim/vimfiles/ftplugin/pydiction/complete-dict'
 
 " NERDTree Settings
 let g:NERDTreeWinPos = "right"
