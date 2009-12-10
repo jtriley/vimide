@@ -104,15 +104,19 @@ let g:miniBufExplMaxSize = 1 " <max lines: defualt 0> setting this to 0 will mea
 let g:miniBufExplMapCTabSwitchBufs = 1
 "let g:miniBufExplMapWindowNavArrows = 1
 "for buffers that have NOT CHANGED and are NOT VISIBLE.
-highlight MBENormal guibg=LightGray guifg=DarkGray
-" for buffers that HAVE CHANGED and are NOT VISIBLE
-highlight MBEChanged guibg=Red guifg=DarkRed
+highlight MBENormal  ctermfg=LightBlue  guibg=LightGray guifg=DarkGray
 " buffers that have NOT CHANGED and are VISIBLE
-highlight MBEVisibleNormal term=bold cterm=bold gui=bold guibg=Gray guifg=Black
-" buffers that have CHANGED and are VISIBLE
-highlight MBEVisibleChanged term=bold cterm=bold gui=bold guibg=DarkRed guifg=Black
+highlight MBEVisibleNormal term=bold cterm=bold gui=bold guibg=Gray guifg=Black ctermbg=Blue  ctermfg=Green
+" for buffers that HAVE CHANGED and are NOT VISIBLE
+highlight MBEChanged ctermfg=DarkRed guibg=Red guifg=DarkRed
+" buffers that HAVE CHANGED and are VISIBLE
+highlight MBEVisibleChanged term=bold cterm=bold gui=bold guibg=DarkRed guifg=Black ctermbg=Blue ctermfg=Red
 " load pydiction's complete-dict
 let &dictionary = '~/.vim/vimfiles/ftplugin/pydiction/complete-dict'
+
+let python_higlight_all = 1
+let python_slow_sync = 1
+let python_print_as_function = 0
 
 " NERDTree Settings
 let g:NERDTreeWinPos = "right"
