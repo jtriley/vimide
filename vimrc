@@ -9,6 +9,7 @@ set incsearch
 set visualbell
 set autochdir
 set number
+set mouse=a
 set scrolloff=3
 set history=1000
 "set shortmess=atI
