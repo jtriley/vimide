@@ -7,6 +7,5 @@ setlocal expandtab
 setlocal smartindent
 setlocal autoindent
 setlocal cinwords=if,elif,else,for,while,try,except,finally,def,class
-set complete+=k~/.vim/syntax/python.vim isk+=.,(
 nmap <F5> <Esc>:!python %<CR>
 normal m`:%s/\s\+$//e ``
