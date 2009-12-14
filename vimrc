@@ -121,3 +121,6 @@ let python_print_as_function = 0
 
 " NERDTree Settings
 let g:NERDTreeWinPos = "right"
+
+" Tmux Settings
+let g:ScreenImpl = 'Tmux'
