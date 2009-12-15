@@ -14,6 +14,13 @@ set scrolloff=3
 set history=1000
 "set shortmess=atI
 
+" shortcuts for moving windows
+nmap <C-j> <C-W>j
+nmap <C-k> <C-W>k
+nmap <C-h> <C-W>h
+nmap <C-l> <C-W>l
+
+
 "drop-down menu options
 set wildmenu
 set wildmode=list:longest
