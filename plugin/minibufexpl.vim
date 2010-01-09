@@ -505,8 +505,8 @@ endif
 if g:miniBufExplMapCTabSwitchBufs
   "noremap <C-TAB>   :call <SID>CycleBuffer(1)<CR>:<BS>
   "noremap <C-S-TAB> :call <SID>CycleBuffer(0)<CR>:<BS>
-  noremap (   :call <SID>CycleBuffer(1)<CR>:<BS>
-  noremap ) :call <SID>CycleBuffer(0)<CR>:<BS>
+  noremap )   :call <SID>CycleBuffer(1)<CR>:<BS>
+  noremap ( :call <SID>CycleBuffer(0)<CR>:<BS>
 endif
 
 "
