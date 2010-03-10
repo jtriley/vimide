@@ -87,6 +87,7 @@ nnoremap <silent> <F9> :NERDTreeToggle<CR>
 
 "unravel one line xml files
 autocmd FileType xml nmap <F2> <Esc>:1,$!xmllint --format -<CR>
+autocmd FileType rst nmap <F2> <Esc>:make html<CR>
 
 " omnicomplete/supertab settings
 let g:SuperTabDefaultCompletionType="context"
